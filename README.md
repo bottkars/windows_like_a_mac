@@ -39,7 +39,7 @@ install cascadia code fonts [cascadia](https://github.com/microsoft/cascadia-cod
 run ubuntu
 
 ```bash
-sudo apt install zsh -y
+sudo apt install zsh unzip -y
 bash "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/agnoster/agnoster-zsh-theme.git ~/.oh-my-zsh/custom/themes/agnoster
 ```
@@ -50,4 +50,9 @@ sudo apt install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ```
-s
+install the cloud cli´s
+```bash
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
