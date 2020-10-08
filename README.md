@@ -30,9 +30,7 @@ cd lastpass-cli
 make
 sudo make install
 ```
-```bash
 
-```
 
 install cascadia code fonts [cascadia](https://github.com/microsoft/cascadia-code/releases)
 
@@ -40,19 +38,30 @@ run ubuntu
 
 ```bash
 sudo apt install zsh unzip -y
-bash "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+eval "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/agnoster/agnoster-zsh-theme.git ~/.oh-my-zsh/custom/themes/agnoster
 ```
 
+```python
+pip install 'ansible[AZURE]'
 ```
-sudo apt update
-sudo apt install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
+create rsa key
+```bash
+ssh-keygen -t rsa -b 4096
 ```
+
+
 install the cloud cli´s
 ```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+```
+```bash
+sudo wget -q -O - https://raw.githubusercontent.com/starkandwayne/homebrew-cf/master/public.key | sudo  apt-key add -
+sudo echo "deb http://apt.starkandwayne.com stable main" | sudo  tee /etc/apt/sources.list.d/starkandwayne.list
+sudo apt-get update
+sudo apt-get install om bosh-cli yq jq cf7-cli -y
+```
+
