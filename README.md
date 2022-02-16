@@ -1,4 +1,4 @@
-# windows_like_a_mac
+#  OH MY WSL windows_like_a_mac
 my braindump do convert my windows machine into something mac like
 
 upgrade to 1909 ????
@@ -23,6 +23,9 @@ sudo apt-get --no-install-recommends -yqq install \
   libssl1.1 \
   pkg-config \
   ca-certificates \
+  libbz2-dev \
+  liblzma-dev \
+  libjpeg-dev \
   xclip
   
 git clone https://github.com/lastpass/lastpass-cli
@@ -30,11 +33,13 @@ cd lastpass-cli
 make
 sudo make install
 ```
-
+https://blog.nillsf.com/index.php/2020/02/17/setting-up-wsl2-windows-terminal-and-oh-my-zsh/
 
 install cascadia code fonts [cascadia](https://github.com/microsoft/cascadia-code/releases)
 
 run ubuntu
+
+Install ZSH and Packagesdf -h
 
 ```bash
 sudo apt install zsh unzip -y
@@ -43,7 +48,13 @@ git clone https://github.com/agnoster/agnoster-zsh-theme.git ~/.oh-my-zsh/custom
 ```
 
 ```python
-pip install 'ansible[AZURE]'
+
+sudo apt install python3 python3-pip -y
+sudo apt-get remove python2.7 -y
+python3 -m pip install 'rust'
+python3 -m pip install 'setuptools_rust'
+python3 -m pip install 'ansible'
+python3 -m pip install jmespath boto3
 ```
 create rsa key
 ```bash
